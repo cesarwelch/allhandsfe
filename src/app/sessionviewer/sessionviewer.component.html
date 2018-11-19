@@ -1,0 +1,26 @@
+<div class="container headerSpace">
+    <a routerLink="/session/{{url}}" routerLinkActive="active">Create a new Session</a>
+    <table class="table headerSpace2">
+        <thead>
+            <tr>
+                <th scope="col">
+                    {{headElements[0]}}
+                </th>
+                <th scope="col">
+                    {{headElements[1]}}
+                </th>
+            </tr>
+        </thead>
+        <tbody >
+        	<tr *ngFor="let el of sessions; let i = index">
+        		<th scope="row">
+                    {{ i+1 }}
+                </th>
+                <th scope="row">
+                    <a routerLink="/session/{{ el.session }}" routerLinkActive="active">{{ el.session }}</a>
+                </th>
+        	</tr>
+        </tbody>
+    </table>
+
+</div>

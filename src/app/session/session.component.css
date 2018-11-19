@@ -1,0 +1,16 @@
+.question {
+	min-height: 100px;
+	background-color: #5ccc70;
+	margin-top: 10px;
+	color: white;
+	word-break: break-all
+}
+.headerSpace {
+  margin-top: 60px;
+}
+
+.icon {
+	height: 50px;
+	width: 50px;
+	-webkit-filter: drop-shadow(5px 5px 5px #222 );
+}

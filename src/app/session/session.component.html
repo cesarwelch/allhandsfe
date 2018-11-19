@@ -1,0 +1,25 @@
+<div class="container headerSpace">
+	<a routerLink="" routerLinkActive="active">Back</a>
+	 <h1>Question</h1>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="name">Question</label>
+        <input type="text" [maxlength]="255" class="form-control" name="questionInput" [(ngModel)]="question.question" change="lengthCheck">
+        <p>{{question.question.length}}/255</p>
+      </div>
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+	<div *ngFor="let question of questions" class="container"> 
+		<div class="row question">             
+			<div class="col-md-10">
+				<p>{{ question.question }}</p>
+			</div>
+			<div class="col-md-2">
+				{{ question.likes }}
+				<img (click)="down(question)" class="icon" src="../../assets/test1.png">
+				<img (click)="up(question)" class="icon" src="../../assets/test2.png">
+			</div>
+
+		</div>
+	</div>
+</div>
